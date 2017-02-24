@@ -1,0 +1,153 @@
+$primarycolor: lightblue;
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "../../node_modules/normalize.css/normalize";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+.container{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul{
+	li{
+		list-style-type: none;
+	}
+}
+button{
+	&:focus{
+		outline: none;
+	}
+
+}
+
+@mixin clearfix(){
+	&:after, &:before{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+.main_header{
+	padding: 17px 0;
+	background-color: #131313;
+	nav{
+		position: relative;
+		@include clearfix();
+		.nav_list{
+			.nav_item{
+				list-style-type: none;
+				display: inline-block;
+				vertical-align: middle;
+				.nav_link_logo{
+					display: block;
+					background: url(../images/icons.png) no-repeat 0 0;
+					width: 151px;
+					height: 37px;
+				}
+				button{
+					display: block;
+					
+					padding: 0;
+					margin: 0 auto;
+					span{
+						vertical-align: middle;
+					}
+				}
+				&.nav_item_menu{
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -12px;
+
+				}
+					
+			}
+		}
+	}
+}
+.section_video{
+	
+	background-image: url('../images/mobile/bg-sm-poster.jpg');
+	background-size: cover;
+	background-position: center center;
+	height: 400px;
+	position: relative;
+	.video_text_block{
+		position: absolute;
+		bottom: 36px;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		color: #fff;
+		font-size: 0;
+		width: 100%;
+		text-align: center;
+		.video_play{
+			background-image: url('../images/play.png');
+			background-repeat: no-repeat;
+			width: 35px;
+			height: 26px;
+			
+		}
+		.video_text, .video_play{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 24px;
+			a{
+				border-bottom: 1px solid rgba(255, 255, 255, .5);
+				padding-bottom: 4px;
+			}
+		}
+	}
+	
+}
+
+
+.section_about{
+	padding-top: 50px;
+	.section_about_content{
+		p{
+			padding-bottom: 40px;
+		}
+	}
+	.secondary_header{
+		h1{
+			padding-bottom: 40px;
+			color: #ff7e00;
+			font-size: 34px;
+		}
+	}
+}
+
+.section_catalog_preview{
+	padding-top: 40px;
+	overflow: hidden;
+	.catalog_preview_item{
+		&.catalog_preview_item_image{
+			img{
+				width: 130%;
+			}
+		}
+		h2{
+			font-size: 50px;
+			color: #ff7e00;
+		}
+	}
+}
